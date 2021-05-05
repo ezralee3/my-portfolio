@@ -1,34 +1,24 @@
 import React, { useState, useLayoutEffect } from 'react'
-import logo from './logo192.png';
-import { BrowserRouter, Route, Link } from 'react-router-dom'; 
-import Projects from './components/Projects.js'; 
-import Resume from './components/Resume.js'; 
-import About from './components/About.js';
-import './App.css';
-import { Typography, Grid, Col, Row, Divider } from "antd";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Home from "./components/Home";
+import About from "./components/About";
+import SinglePost from "./components/SinglePost";
+import Post from "./components/Post";
+import Project from "./components/Project";
+import NavBar from "./components/NavBar"
 
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
-
-        <Route exact path="/" component={Projects} />
-        <Route path="/resume" component={Resume} />
-        <Route path="/about" component={About} />
-        
-        <div className="navigation">
-          <img src={logo} className="logo-image" alt="Logo Image" />
-          <div className="navigation-sub">
-
-            <Link to="/" className="item">Projects</Link>
-            <Link to="/resume" className="item">Resume</Link>
-            <Link to="/about" className="item">About</Link>
-
-          </div>
-        </div>
-      </div>
+      <NavBar />
+        <Switch>
+          <Route component={Home} path='/' exact/>
+          <Route component={About} path='/about' />
+          <Route component={SinglePost} path='/post/:slug' />
+          <Route component={Post} path='/post' />
+          <Route component={Project} path='/project' />
+        </Switch>
     </BrowserRouter>
-    
   );
 }
 
