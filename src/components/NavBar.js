@@ -4,14 +4,14 @@ import {SocialIcon} from "react-social-icons"
 
 export default function NavBar() {
     return (
-        <header className="bg-red-600">
+        <header className="bg-blue-600">
             <div className="container mx-auto flex justify-between">
                 <nav className="flex">
                     <NavLink 
                         to="/" 
                         exact
                         activeClassName="text-white" 
-                        className="inflex-flex items-center py-6 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest"
+                        className="inflex-flex items-center py-8 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest"
                     >
                         Ezra
                     </NavLink>
@@ -36,9 +36,8 @@ export default function NavBar() {
                     </NavLink>
                 </nav>
                 <div className="inline-flex py-3 px-3 my-6">
-                    <SocialIcon url="https://twitter.com/kapehe_ok" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
-                    <SocialIcon url="https://youtube.com/c/kapehe" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
-                    <SocialIcon url="https://linkedin.com/in/kapehe" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
+                    <SocialIcon url="https://github.com/ezralee3" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
+                    <SocialIcon url="https://linkedin.com/in/ezrallee" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}}/>
                 </div>
             </div>
         </header>
